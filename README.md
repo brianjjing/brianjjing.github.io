@@ -1,6 +1,7 @@
 <p align="center">
-  # Brian Jing
-
+  <strong>Brian Jing</strong><br>
+</p>
+<p align="center">
   📍 Irvine / UC San Diego  📞 (949) 596-6942  📧 brianjing1@gmail.com  
 </p>
 ---

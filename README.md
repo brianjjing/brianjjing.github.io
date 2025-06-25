@@ -1,27 +1,45 @@
 # Brian Jing
 
-📍 Irvine / San Diego  📞 (949) 596-6942  📧 brianjing1@gmail.com  
+📍 Irvine / UC San Diego  📞 (949) 596-6942  📧 brianjing1@gmail.com  
 
 ---
 
-## 🚀 Projects
+## 🔗 My Links
+[Kaggle](https://www.kaggle.com/brianjing) | [GitHub](https://github.com/brianjjing)
 
-### [POWERCOACH - Powerlifting Form Correction App](#)
-*August 2024 – Present*  
-- Creating and optimizing a barbell detection model using Google’s MediaPipe with ~90% precision  
+---
+
+## 🚀 My Best Projects
+
+### [POWERCOACH - Powerlifting Form Correction App](https://github.com/brianjjing/powercoach)
+*In Progress: August 2024 – Present*  
+- Creating and optimizing a barbell detection model using Google’s MediaPipe with ~90% precision
+- **Web scraped __+ images...**
 - Connecting real-time form correction to a Swift app via WebSockets  
 - Releasing to the App Store with 15+ exercises and a live discussion forum  
 
 ---
 
-### [AI Tuberculosis Detector](#)
-*June 2024 – July 2024*  
+### [CMI Sensor Data - BFRB Prediction](https://www.kaggle.com/competitions/cmi-detect-behavior-with-sensor-data)
+*In Progress: June 2025 – Present*  
+- ...
+
+---
+
+### [AI Tuberculosis Detector](https://www.kaggle.com/code/brianjing/hepatitis-prediction-model-randomforest)
+*June 2024 – July 2024*
 - Trained a TensorFlow CNN to diagnose TB from 4,200 chest X-rays with 98% testing accuracy  
 - Published to Kaggle for open improvement and community feedback  
 
 ---
 
-### [Alzheimer’s Diagnosis Model](#)
+### [Hepatitis Prediction Model](https://www.kaggle.com/code/brianjing/tuberculosis-x-ray-diagnosis-cnn-classifier)
+*September 2023 – October 2023*  
+- ...
+
+---
+
+### [Alzheimer’s Diagnosis Model](https://www.kaggle.com/code/brianjing/alzheimer-s-detection-model-using-r)
 *July 2023 – August 2023*  
 - Led a 7-person team to develop a Random Forest model with 90% accuracy on 2,700+ records  
 - Pitched to 200+ attendees and UC Irvine CS faculty to discuss AI’s medical potential  
@@ -63,4 +81,4 @@ Expected 2028
 
 ## 🌐 Connect With Me
 
-[LinkedIn](https://www.linkedin.com/in/brian-jing-70a37425b/) | [Email](mailto:brian)
+[LinkedIn](https://www.linkedin.com/in/brian-jing-70a37425b/) | [Instagram](instagram.com/brianjingy) | [Email](mailto:brian)

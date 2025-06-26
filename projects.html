@@ -92,11 +92,26 @@
     .project-content {
       flex-grow: 1;
       overflow-y: scroll;
-      max-height: 300px; /* adjust based on your layout preference */
+      max-height: 300px;
       margin-bottom: 10px;
-      scrollbar-width: thin;
+      scrollbar-width: thin; /* Firefox */
+      scrollbar-color: #bbb transparent; /* Firefox */
     }
-    
+
+    /* Chrome, Safari scrollbar styles */
+    .project-content::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .project-content::-webkit-scrollbar-thumb {
+      background-color: #bbb;
+      border-radius: 5px;
+    }
+
+    .project-content::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
     .project-card a {
       font-weight: 600;
       color: #0077cc;
@@ -151,7 +166,7 @@
         </div>
         <a href="https://www.kaggle.com/code/brianjing/hepatitis-prediction-model-randomforest" target="_blank">View on Kaggle</a>
       </div>
-      
+
       <div class="project-card">
         <div class="project-content">
           <h3>Alzheimer’s Diagnosis Model</h3>
@@ -160,7 +175,6 @@
         <a href="https://www.kaggle.com/code/brianjing/alzheimer-s-detection-model-using-r" target="_blank">View on Kaggle - Part 1</a>
         <a href="https://www.kaggle.com/code/brianjing/alzheimer-s-detection-model-using-r-pt-2" target="_blank">View on Kaggle - Part 2</a>
       </div>
-      
     </div>
   </div>
 </body>

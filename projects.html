@@ -91,16 +91,11 @@
 
     .project-content {
       flex-grow: 1;
+      overflow-y: auto;
+      max-height: 280px; /* adjust based on your layout preference */
       margin-bottom: 10px;
-      overflow: hidden;
-      transition: max-height 0.4s ease;
-      max-height: 160px; /* collapsed preview height */
     }
     
-    .project-content.expanded {
-      max-height: 1500px; /* enough to show all content */
-    }
-
     .project-card a {
       font-weight: 600;
       color: #0077cc;
@@ -112,27 +107,6 @@
       text-decoration: underline;
     }
 
-    .project-content.collapsed {
-      max-height: 280px;
-      overflow: hidden;
-      position: relative;
-    }
-    
-    .see-more-btn {
-      background-color: transparent;
-      border: none;
-      color: #0077cc;
-      font-weight: 600;
-      cursor: pointer;
-      margin-bottom: 10px;
-      padding: 0;
-    }
-    
-    .see-more-btn:hover {
-      text-decoration: underline;
-    }
-
-    
   </style>
 </head>
 <body>
@@ -182,26 +156,11 @@
           <h3>Alzheimer’s Diagnosis Model</h3>
           <p>The project that started it all - this was my first full end-to-end data science pipeline ever. As part of UC Irvine's 2023 Information and Computer Sciences (ICS) Summer Academy, I, along with a team of 6 others, developed a multinomial LASSO regression model and a random forest classification model to detect Alzheimer’s from medical records using R. We also used SMOTE for class balancing and ggplot2 for EDA beforehand. We ended up diagnosing a dataset of 2,700 Alzheimer's patients with 90% accuracy, presenting the model to ICS parents and UCI CS staff.</p>
         </div>
-        <button class="toggle-btn">See more...</button>
         <a href="https://www.kaggle.com/code/brianjing/alzheimer-s-detection-model-using-r" target="_blank">View on Kaggle - Part 1</a>
         <a href="https://www.kaggle.com/code/brianjing/alzheimer-s-detection-model-using-r-pt-2" target="_blank">View on Kaggle - Part 2</a>
       </div>
       
     </div>
   </div>
-  <script>
-    document.querySelectorAll('.toggle-btn').forEach(button => {
-      button.addEventListener('click', () => {
-        const content = button.previousElementSibling;
-        content.classList.toggle('expanded');
-        
-        if (content.classList.contains('expanded')) {
-          button.textContent = 'See less...';
-        } else {
-          button.textContent = 'See more...';
-        }
-      });
-    });
-  </script>
 </body>
 </html>

@@ -32,17 +32,23 @@
       color: #1f1f1f;
     }
 
+    <nav>
+      <div class="nav-center">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="experience.html">Experience</a>
+      </div>
+    </nav>
+
     nav {
-      text-align: center;
+      display: flex;
+      justify-content: center;
       margin-bottom: 40px;
     }
-
-    nav a {
-      margin: 0 12px;
-      text-decoration: none;
-      color: #0077cc;
-      font-weight: 600;
-      transition: color 0.2s ease;
+    
+    .nav-center {
+      display: flex;
+      gap: 40px; /* Adjust spacing between tabs */
     }
 
     nav a:hover {

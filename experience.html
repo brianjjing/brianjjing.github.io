@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Brian Jing – Experience</title>
+  <title>Brian Jing – Projects</title>
   <meta charset="UTF-8">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
@@ -33,28 +33,30 @@
     }
 
     nav {
-      display: flex;
-      justify-content: center;
+      text-align: center;
       margin-bottom: 40px;
     }
-    
-    .nav-center {
-      display: flex;
-      gap: 40px; /* Adjust spacing between tabs */
+
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: 600;
+      transition: color 0.2s ease;
     }
 
     nav a:hover {
       color: #004c99;
     }
 
-    .experience-grid {
+    .projects-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 30px;
     }
 
-    .experience-card {
+    .project-card {
       background-color: #ffffff;
       border-radius: 15px;
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
@@ -63,65 +65,73 @@
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    .experience-card:hover {
+    .project-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
     }
 
-    .experience-card h3 {
+    .project-card h3 {
       font-size: 1.2rem;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
       color: #222;
     }
 
-    .experience-card h4 {
-      font-size: 1rem;
-      font-weight: 500;
-      color: #555;
+    .project-card p {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: #444;
       margin-bottom: 10px;
     }
 
-    .experience-card p {
-      font-size: 0.93rem;
-      line-height: 1.5;
-      color: #444;
+    .project-card a {
+      font-weight: 600;
+      color: #0077cc;
+    }
+
+    .project-card a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Experience</h1>
+    <h1>My Projects</h1>
     <nav>
-      <div class="nav-center">
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="experience.html">Experience</a>
-      </div>
+      <a href="index.html">Home</a> |
+      <a href="projects.html">Projects</a> |
+      <a href="experience.html">Experience</a>
     </nav>
 
-    <div class="experience-grid">
-      <div class="experience-card">
-        <h3>Independent Math Tutor</h3>
-        <h4>Self-Employed · Irvine / La Jolla</h4>
-        <p>Feb 2024 – Present</p>
-        <p>Tutored algebra & calculus to 10+ students, helping each earn A's. Generated $10,000+ through community-based marketing and referrals.</p>
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3>POWERCOACH</h3>
+        <p>Real-time feedback app for weightlifting form, built using MediaPipe, WebSockets, and SwiftUI. Launching soon on the App Store.</p>
+        <a href="https://github.com/brianjjing/powercoach" target="_blank">View on GitHub</a>
       </div>
 
-      <div class="experience-card">
-        <h3>Data Science Lead</h3>
-        <h4>Ignited Minds Nonprofit · Remote / Malawi</h4>
-        <p>Jul 2023 – Apr 2024</p>
-        <p>Developed a remote data science curriculum that reached 1,000+ students across underserved regions. Authored monthly AI articles to spark interest in real-world data science.</p>
+      <div class="project-card">
+        <h3>CMI Sensor Data – BFRB Prediction</h3>
+        <p>Classifying self-regulating behaviors from sensor streams using ML models. Built with time-series preprocessing + ensemble learning.</p>
+        <a href="https://www.kaggle.com/competitions/cmi-detect-behavior-with-sensor-data" target="_blank">View on Kaggle</a>
       </div>
 
-      <div class="experience-card">
-        <h3>Club Media Manager</h3>
-        <h4>UCSD AI Student Org</h4>
-        <p>Fall 2023</p>
-        <p>Co-founded a student org and designed media that helped recruit 50+ members. Organized speaker events and ran online outreach using AI-generated graphics and data-driven targeting.</p>
+      <div class="project-card">
+        <h3>AI Tuberculosis Detector</h3>
+        <p>Trained a CNN to detect tuberculosis in chest X-rays with 98% testing accuracy on 4,200+ samples. Deployed on Kaggle.</p>
+        <a href="https://www.kaggle.com/code/brianjing/tuberculosis-x-ray-diagnosis-cnn-classifier" target="_blank">View Project</a>
       </div>
 
-      <!-- Add more cards below as needed -->
+      <div class="project-card">
+        <h3>Alzheimer’s Diagnosis Model</h3>
+        <p>Led a team to develop a Random Forest model detecting Alzheimer’s from structured medical records (90% accuracy).</p>
+        <a href="https://www.kaggle.com/code/brianjing/alzheimer-s-detection-model-using-r" target="_blank">View Project</a>
+      </div>
+
+      <div class="project-card">
+        <h3>Hepatitis Predictor</h3>
+        <p>Built a binary classification model to diagnose Hepatitis using patient records and SMOTE-based balancing for fairness.</p>
+        <a href="https://www.kaggle.com/code/brianjing/hepatitis-prediction-model-randomforest" target="_blank">View on Kaggle</a>
+      </div>
     </div>
   </div>
 </body>

@@ -20,6 +20,7 @@
       align-items: center;
       padding: 40px 20px;
     }
+
     h1 {
       text-align: center;
       font-size: 2.5rem;
@@ -47,6 +48,7 @@
 
     nav a:hover {
       color: #004c99;
+      text-decoration: none;
     }
 
     .projects-grid {
@@ -62,6 +64,10 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
       padding: 20px;
       width: 300px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 250px;
       transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
@@ -80,12 +86,18 @@
       font-size: 0.95rem;
       line-height: 1.5;
       color: #444;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+    }
+
+    .project-content {
+      flex-grow: 1;
     }
 
     .project-card a {
       font-weight: 600;
       color: #0077cc;
+      align-self: flex-start;
+      margin-top: auto;
     }
 
     .project-card a:hover {
@@ -104,32 +116,42 @@
 
     <div class="projects-grid">
       <div class="project-card">
-        <h3>POWERCOACH</h3>
-        <p>Real-time feedback app for weightlifting form, built using MediaPipe, WebSockets, and SwiftUI. Launching soon on the App Store.</p>
+        <div class="project-content">
+          <h3>POWERCOACH</h3>
+          <p>Real-time feedback app for weightlifting form, built using MediaPipe, WebSockets, and SwiftUI. Launching soon on the App Store.</p>
+        </div>
         <a href="https://github.com/brianjjing/powercoach" target="_blank">View on GitHub</a>
       </div>
 
       <div class="project-card">
-        <h3>CMI Sensor Data – BFRB Prediction</h3>
-        <p>Classifying self-regulating behaviors from sensor streams using ML models. Built with time-series preprocessing + ensemble learning.</p>
+        <div class="project-content">
+          <h3>CMI Sensor Data – BFRB Prediction</h3>
+          <p>Classifying self-regulating behaviors from sensor streams using ML models. Built with time-series preprocessing + ensemble learning.</p>
+        </div>
         <a href="https://www.kaggle.com/competitions/cmi-detect-behavior-with-sensor-data" target="_blank">View on Kaggle</a>
       </div>
 
       <div class="project-card">
-        <h3>AI Tuberculosis Detector</h3>
-        <p>Trained a CNN to detect tuberculosis in chest X-rays with 98% testing accuracy on 4,200+ samples. Deployed on Kaggle.</p>
+        <div class="project-content">
+          <h3>AI Tuberculosis Detector</h3>
+          <p>Trained a CNN to detect tuberculosis in chest X-rays with 98% testing accuracy on 4,200+ samples. Deployed on Kaggle.</p>
+        </div>
         <a href="https://www.kaggle.com/code/brianjing/tuberculosis-x-ray-diagnosis-cnn-classifier" target="_blank">View Project</a>
       </div>
 
       <div class="project-card">
-        <h3>Alzheimer’s Diagnosis Model</h3>
-        <p>Led a team to develop a Random Forest model detecting Alzheimer’s from structured medical records (90% accuracy).</p>
+        <div class="project-content">
+          <h3>Alzheimer’s Diagnosis Model</h3>
+          <p>Led a team to develop a Random Forest model detecting Alzheimer’s from structured medical records (90% accuracy).</p>
+        </div>
         <a href="https://www.kaggle.com/code/brianjing/alzheimer-s-detection-model-using-r" target="_blank">View Project</a>
       </div>
 
       <div class="project-card">
-        <h3>Hepatitis Predictor</h3>
-        <p>Built a binary classification model to diagnose Hepatitis using patient records and SMOTE-based balancing for fairness.</p>
+        <div class="project-content">
+          <h3>Hepatitis Predictor</h3>
+          <p>Built a binary classification model to diagnose Hepatitis using patient records and SMOTE-based balancing for fairness.</p>
+        </div>
         <a href="https://www.kaggle.com/code/brianjing/hepatitis-prediction-model-randomforest" target="_blank">View on Kaggle</a>
       </div>
     </div>

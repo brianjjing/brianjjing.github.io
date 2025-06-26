@@ -15,8 +15,24 @@
       background-color: #f9f9fb;
       color: #2c2c2c;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      align-items: center;
       padding: 40px 20px;
+    }
+    nav {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 1rem;
+    }
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: 600;
+      transition: color 0.2s ease;
+    }
+    nav a:hover {
+      color: #004c99;
     }
     .container {
       max-width: 800px;
@@ -30,20 +46,6 @@
       font-size: 2.5rem;
       margin-bottom: 20px;
       color: #1f1f1f;
-    }
-    nav {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    nav a {
-      margin: 0 12px;
-      text-decoration: none;
-      color: #0077cc;
-      font-weight: 600;
-      transition: color 0.2s ease;
-    }
-    nav a:hover {
-      color: #004c99;
     }
     h2 {
       font-size: 1.4rem;
@@ -75,29 +77,10 @@
       font-size: 0.95rem;
       color: #444;
     }
-    .link-logos {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      margin-top: 15px;
-    }
-    
-    .link-logos a img {
-      width: 100%;
-      max-width: 160px;
-      height: auto;
-      display: block;
-      margin: 0 auto;
-      transition: transform 0.2s ease;
-    }
-
     .link-logos-wrapper {
       display: flex;
       justify-content: center;
     }
-    
     .link-logos {
       display: flex;
       justify-content: space-between;
@@ -106,48 +89,54 @@
       gap: 20px;
       max-width: 75%;
     }
-    
+    .link-logos a img {
+      width: 100px;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+      transition: transform 0.2s ease;
+    }
     .link-logos a:hover img {
       transform: scale(1.05);
     }
   </style>
 </head>
 <body>
+  <!-- Navigation above the card -->
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="projects.html">Projects</a> |
+    <a href="experience.html">Experience</a>
+  </nav>
+
   <div class="container">
     <h1>Brian Jing</h1>
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="projects.html">Projects</a> |
-      <a href="experience.html">Experience</a>
-    </nav>
 
     <h2>About Me</h2>
     <p>Hi, I'm Brian Jing, an incoming sophomore at UC San Diego studying data science! I'm passionate about developing AI products that solve real-world problems and improve business operations. In high school, most of my impact was in healthcare — from a convolutional neural network detecting tuberculosis to a random forest Alzheimer’s diagnosis model. But now, I'm expanding my impact beyond healthcare, looking to use those same AI tools to improve how businesses operate across many different industries.</p>
     <p>Currently, I’m taking inspiration from my interest in fitness to build <strong>POWERCOACH</strong>, an app that gives real-time feedback on weightlifting form to help gym-goers avoid injury and lift smarter.</p>
 
-    <h2 style = "text-align: center;">My Links</h2>
+    <h2 style="text-align: center;">My Links</h2>
     <div class="link-logos-wrapper">
       <div class="link-logos">
         <a href="https://www.kaggle.com/brianjing" target="_blank">
-          <img src="kaggle.jpg" alt="Kaggle" style="width: 100px;">
+          <img src="kaggle.jpg" alt="Kaggle">
         </a>
         <a href="https://github.com/brianjjing" target="_blank">
-          <img src="github.png" alt="GitHub" style="width: 100px;">
+          <img src="github.png" alt="GitHub">
         </a>
         <a href="https://www.linkedin.com/in/brian-jing-70a37425b/" target="_blank">
-          <img src="linkedin.jpg" alt="LinkedIn" style="width: 100px;">
+          <img src="linkedin.jpg" alt="LinkedIn">
         </a>
         <a href="https://instagram.com/brianjingy" target="_blank">
-          <img src="instagram.jpg" alt="Instagram" style="width: 100px;">
+          <img src="instagram.jpg" alt="Instagram">
         </a>
       </div>
     </div>
 
-    <div>
-      <h3 style = "text-align: center;">Contact Me!</h3>
-      <div class="contact">
-        📞 (949) 596-6942   📧 <a href="mailto:brianjing1@gmail.com">brianjing1@gmail.com</a>
-      </div>
+    <h3 style="text-align: center;">Contact Me!</h3>
+    <div class="contact">
+      📞 (949) 596-6942  📧 <a href="mailto:brianjing1@gmail.com">brianjing1@gmail.com</a>
     </div>
   </div>
 </body>

@@ -99,6 +99,20 @@
       padding-top: 20px;
       border-top: 1px solid #ddd;  /* subtle top border for separation (optional) */
     }
+    .profile-pic-wrapper {
+      display: flex;
+      justify-content: center;
+      margin: 25px 0 35px;
+    }
+    
+    .profile-pic {
+      width: 200px;              /* adjust size as needed */
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;        /* makes it a circle */
+      border: 4px solid #000000; /* black circular border */
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12); /* optional soft shadow */
+    }
   </style>
 </head>
 <body>
@@ -114,6 +128,10 @@
     <p>Hi, I'm Brian Jing, an incoming sophomore at UC San Diego studying data science! I'm passionate about developing AI products that solve real-world problems and improve business operations. In high school, most of my impact was in healthcare — from a convolutional neural network detecting tuberculosis to a random forest Alzheimer’s diagnosis model. But now, I'm expanding my impact beyond healthcare, looking to use those same AI tools to improve how businesses operate across many different industries.</p>
     <p>Currently, I’m taking inspiration from my interest in fitness to build <strong>POWERCOACH</strong>, an app that gives real-time feedback on weightlifting form to help gym-goers avoid injury and lift smarter.</p>
 
+    <div class="profile-pic-wrapper">
+      <img src="professionalpfp.png" alt="Brian Jing" class="profile-pic">
+    </div>
+    
     <h2 style="text-align: center;">My Links</h2>
     <div class="link-logos-wrapper">
       <div class="link-logos">

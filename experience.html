@@ -1,82 +1,128 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Experience – Brian Jing</title>
+  <title>Brian Jing – Experience</title>
   <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
+      font-family: 'Inter', sans-serif;
+      background-color: #f9f9fb;
+      color: #2c2c2c;
+      padding: 40px 20px;
+      display: flex;
+      justify-content: center;
     }
-    nav {
-      text-align: center;
-      margin-bottom: 20px;
+
+    .container {
+      max-width: 1200px;
+      width: 100%;
     }
-    nav a {
-      margin: 0 10px;
-      text-decoration: none;
-      color: #0366d6;
-      font-weight: bold;
-    }
+
     h1 {
       text-align: center;
+      font-size: 2.5rem;
+      margin-bottom: 40px;
+      color: #1f1f1f;
     }
-    h2 {
-      color: #333;
+
+    nav {
+      text-align: center;
+      margin-bottom: 40px;
     }
-    .job {
-      margin-bottom: 20px;
+
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #0077cc;
+      font-weight: 600;
+      transition: color 0.2s ease;
     }
-    .job-title {
-      font-weight: bold;
+
+    nav a:hover {
+      color: #004c99;
     }
-    .job-dates {
-      font-style: italic;
-      color: #666;
+
+    .experience-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .experience-card {
+      background-color: #ffffff;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.07);
+      padding: 20px;
+      width: 300px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .experience-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .experience-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 8px;
+      color: #222;
+    }
+
+    .experience-card h4 {
+      font-size: 1rem;
+      font-weight: 500;
+      color: #555;
+      margin-bottom: 10px;
+    }
+
+    .experience-card p {
+      font-size: 0.93rem;
+      line-height: 1.5;
+      color: #444;
     }
   </style>
 </head>
 <body>
+  <div class="container">
+    <h1>Experience</h1>
+    <nav>
+      <a href="index.html">Home</a> |
+      <a href="projects.html">Projects</a> |
+      <a href="experience.html">Experience</a>
+    </nav>
 
-<h1>Experience</h1>
-<nav>
-  <a href="index.html">Home</a> |
-  <a href="projects.html">Projects</a> |
-  <a href="experience.html">Experience</a> |
-  <a href="about.html">About</a>
-</nav>
+    <div class="experience-grid">
+      <div class="experience-card">
+        <h3>Independent Math Tutor</h3>
+        <h4>Self-Employed · Irvine / La Jolla</h4>
+        <p>Feb 2024 – Present</p>
+        <p>Tutored algebra & calculus to 10+ students, helping each earn A's. Generated $10,000+ through community-based marketing and referrals.</p>
+      </div>
 
-<div class="job">
-  <h2 class="job-title">Independent Math Tutor</h2>
-  <p class="job-dates">Self-Employed • Irvine / La Jolla • Feb 2024 – Present</p>
-  <ul>
-    <li>Tutored algebra & calculus to 10+ students, all receiving A grades</li>
-    <li>Generated $10,000+ in revenue through local marketing and referrals</li>
-  </ul>
-</div>
+      <div class="experience-card">
+        <h3>Data Science Lead</h3>
+        <h4>Ignited Minds Nonprofit · Remote / Malawi</h4>
+        <p>Jul 2023 – Apr 2024</p>
+        <p>Developed a remote data science curriculum that reached 1,000+ students across underserved regions. Authored monthly AI articles to spark interest in real-world data science.</p>
+      </div>
 
-<div class="job">
-  <h2 class="job-title">Data Science Lead – Ignited Minds Nonprofit</h2>
-  <p class="job-dates">Remote / Malawi • July 2023 – April 2024</p>
-  <ul>
-    <li>Developed and launched a data science curriculum for underserved schools in Malawi</li>
-    <li>Reached 1,000+ learners and helped scale access to digital STEM education</li>
-    <li>Wrote monthly blog posts on real-world AI topics to support global outreach</li>
-  </ul>
-</div>
+      <div class="experience-card">
+        <h3>Club Media Manager</h3>
+        <h4>UCSD AI Student Org</h4>
+        <p>Fall 2023</p>
+        <p>Co-founded a student org and designed media that helped recruit 50+ members. Organized speaker events and ran online outreach using AI-generated graphics and data-driven targeting.</p>
+      </div>
 
-<div class="job">
-  <h2 class="job-title">Cloud Computing Club - Co-Founder</h2>
-  <p class="job-dates">Remote / Malawi • July 2023 – April 2024</p>
-  <ul>
-    <li>instagram.com/phs_cloud_computing</li>
-    <li>Developed and launched a data science curriculum for underserved schools in Malawi</li>
-    <li>Reached 1,000+ learners and helped scale access to digital STEM education</li>
-    <li>Wrote monthly blog posts on real-world AI topics to support global outreach</li>
-  </ul>
-</div>
-  
+      <!-- Add more cards below as needed -->
+    </div>
+  </div>
 </body>
 </html>

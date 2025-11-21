@@ -264,12 +264,15 @@ function updateFileDisplay(commits) {
         <small>${d.lines.length} lines</small>
     `);
 
+    let colors = d3.scaleOrdinal(d3.schemeTableau10);
+
     filesContainer
         .select('dd')
         .selectAll('div')
         .data((d) => d.lines)
         .join('div')
-        .attr('class', 'loc');
+        .attr('class', 'loc')
+        .attr('style', (d) => `--color: ${colors(d.type)}`);
 }
 
 let data = await loadData();

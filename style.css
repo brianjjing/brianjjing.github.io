@@ -1,0 +1,341 @@
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1; 
+  text-wrap: balance; 
+}
+h1 {
+  font-size: 400%; 
+}
+
+:root {
+  color-scheme: light dark;
+  --color-accent: oklch(67% 67% 67);
+}
+
+img {
+  max-width: 100%;
+  height: auto; /* Ensure this is in your style.css */
+}
+
+body {
+  font: 100%/1.5 system-ui;
+  max-width: 135ch;
+  margin-inline: auto;
+  padding: 1.67rem;
+  accent-color: var(--color-accent);
+}
+
+input,
+textarea,
+button {
+  font: inherit;
+}
+
+form {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1em;
+}
+
+
+label {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-column: 1 / -1;
+}
+
+textarea,
+button {
+  grid-column: 1 / -1; 
+}
+
+button {
+  justify-self: center;
+  padding: 0.5em 1em;
+  background-color: var(--color-accent);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+nav ul {
+  display: contents;
+}
+nav li {
+  display: contents;
+}
+nav {
+  --border-color: oklch(50% 10% 200 / 40%);
+  display: flex;
+  margin-bottom: 2em;
+  border-bottom: 1px solid oklch(67% 15% 200);
+}
+nav a {
+  flex: 1;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+  padding: 0.5em; 
+}
+nav a.current {
+  border-bottom-style: solid;
+  border-bottom-width: 0.4em;
+  border-bottom-color: var(--border-color);
+  padding-bottom: 0.1em;
+}
+nav a:hover {
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+  border-bottom-style: solid;
+  border-bottom-width: 0.4em;
+  border-bottom-color: var(--color-accent);
+  padding-bottom: 0.1em;
+}
+
+
+/* Projects part: */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15em, 1fr));
+  gap: 1em;
+}
+
+.projects-year-text {
+  font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Georgia, serif; 
+  font-variant-numeric: oldstyle-nums;
+  line-height: 1.5; 
+}
+
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+
+  overflow: visible;
+}
+
+.swatch {
+  display: inline-block;
+  width: 1em;            /* width of the color box */
+  aspect-ratio: 1 / 1;   /* ensures it's a perfect square */
+  background-color: var(--color-accent);
+  border-radius: 0.25em; /* slight rounding; use 50% for a circle */
+  margin-right: 0.5em;   /* space between the swatch and the text */
+  vertical-align: middle;
+}
+
+.legend {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 0.5em;
+  list-style: none;
+  padding: 0;
+  margin: 1em 0;
+}
+
+.legend li {
+  display: flex;
+  align-items: center;
+  gap: 0.3em;
+  font-size: 0.9em;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+svg {
+  path {
+    transition: 300ms;
+    cursor: pointer;
+  }
+
+  &:has(path:hover) {
+    path:not(:hover) {
+      opacity: 0.5;
+    }
+  } 
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+
+  &:is(path) {
+    fill: var(--color);
+  }
+
+  &:is(path) {
+    fill: var(--color);
+  }
+}
+
+/* Color Scheme: */
+
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.8rem;
+}
+.color-scheme select {
+  margin-left: 0.5em;
+  border-radius: 0.3em;
+  background: transparent;
+  color: inherit;
+  border: 1px solid currentColor;
+}
+
+
+/* Profile stats */
+#profile-stats {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  justify-items: center;
+  margin-top: 1rem;
+}
+
+#profile-stats dt {
+  grid-row: 1;
+  font-weight: bold;
+}
+
+#profile-stats dd {
+  grid-row: 2;
+  margin: 0;
+}
+
+/* Meta: */
+dl.info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.25em 1em;
+  margin: 0;
+  padding: 0;
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+}
+
+dl.info dt {
+  margin: 0;
+  font-weight: 500;
+  color: #666;
+}
+
+dl.info dd {
+  margin: 0;
+  font-weight: 700;
+  color: #111;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.tooltip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 0.5em 0.75em;
+  border-radius: 4px;
+  font-size: 0.9em;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+circle:hover {
+  transform: scale(1.5);
+}
+
+/* Tooltip */
+.tooltip {
+  position: fixed;
+  top: 1em;
+  left: 1em;
+  padding: 0.75em 1em;
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(200, 200, 200, 0.4);
+  pointer-events: none; /* So it doesn’t block mouse events */
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  opacity: 0;
+  transform: translateY(-4px);
+  z-index: 1000;
+}
+
+/* When visible (you’ll toggle this class in JS) */
+.tooltip.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+circle.selected {
+  fill: #ff6b6b;
+}
+
+/* Stats class: */
+.stats {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin: 2rem 0;
+  text-align: center;
+  font-family: system-ui, sans-serif;
+  background-color: rgba(20, 20, 20, 0.85);
+  color: #f9fafb;
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+}
+
+.stats dt {
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: #d1d5db;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+}
+
+.stats dd {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+}
+
+.stats dt,
+.stats dd {
+  display: block;
+}
+
+.stats > * {
+  flex: 1;
+  min-width: 100px;
+}

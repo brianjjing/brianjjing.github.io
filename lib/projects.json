@@ -1,0 +1,74 @@
+[
+    {
+      "title": "POWERCOACH 🏋️",
+      "year": "2025",
+      "image": "https://media.istockphoto.com/id/1165573327/vector/strong-man-with-heavy-barbell-struggle-doing-exercise.jpg?s=612x612&w=0&k=20&c=UbLr-MYZDNOd-BX2ClP21jFSDtmIFfDLefsT64VCvxo=",
+      "description": "My current and most long-term project. POWERCOACH is a real-time powerlifting form feedback app built using Flask-SocketIO and Mediapipe for the backend, SwiftUI for the frontend, and websockets to connect them. Just set up your camera, lift, and see and hear form critiques from your POWERCOACH! I plan to launch the app on the App Store, with support for 15 weightlifting exercises including the 3 big powerlifting movements (squat, bench, deadlift)."
+    },
+    {
+      "title": "CMI Behavior Detection with Sensor Data 👋",
+      "year": "2025",
+      "image": "https://elements-resized.envatousercontent.com/elements-cover-images/c82ed5fd-c4f5-49e2-878c-b1a3ca6badbf?w=1200&h=630&cf_fit=crop&q=85&format=jpeg&s=b09b1f87a61c4525197a530d759d26172ef6954d05c3a8ec77a83499f240ec44",
+      "description": "I'm currently participating in the Child Mind Institute (CMI) Behavior Detection with Sensor Data Kaggle competition. The goal is to classify body-focused repetitive behaviors (BFRBs) from non-BFRB everyday gestures, in a dataset of over 570,000 gestures. This project involves time-series analysis and deep learning for gesture recognition."
+    },
+    {
+      "title": "AI Tuberculosis Detector 🦠",
+      "year": "2023",
+      "image": "https://img.pikbest.com/png-images/qiantu/prevent-tuberculosis-day-organ-lung-cartoon-anthropomorphic-cartoon-element_2593684.png!sw800",
+      "description": "Using OpenCV and TensorFlow + Keras, I trained a convolutional neural network to detect tuberculosis in chest X-rays with 98% accuracy on over 4,200 images. The model leveraged data augmentation and optimized hyperparameters to achieve robust performance."
+    },
+    {
+      "title": "Diabetes Predictor 🩸",
+      "year": "2023",
+      "image": "https://cdn-icons-png.flaticon.com/512/2966/2966481.png",
+      "description": "I developed a diabetes prediction pipeline using Python. The model leveraged LASSO and Naive Bayes classifiers from scikit-learn, combined with EDA and hyperparameter optimization. The dataset included over 230,000 patient records."
+    },
+    {
+      "title": "Alzheimer’s Diagnosis Model 🧠",
+      "year": "2023",
+      "image": "https://cdn-icons-png.flaticon.com/512/4149/4149670.png",
+      "description": "My first full end-to-end data science pipeline, built during UC Irvine’s 2023 ICS Summer Academy. Our team developed a multinomial LASSO regression and random forest model to detect Alzheimer’s from medical records using R. Achieved 90% accuracy on 2,700 patient records after SMOTE balancing and EDA with ggplot2."
+    },
+    {
+      "title": "Lorem ipsum dolor sit.",
+      "year": "2024",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
+    },
+    {
+      "title": "Lorem ipsum dolor sit.",
+      "year": "2024",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
+    },
+    {
+      "title": "Lorem ipsum dolor sit.",
+      "year": "2024",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
+    },
+    {
+      "title": "Lorem ipsum dolor sit.",
+      "year": "2024",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
+    },
+    {
+      "title": "Lorem ipsum dolor sit.",
+      "year": "2024",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
+    },
+    {
+      "title": "Lorem ipsum dolor sit.",
+      "year": "2024",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
+    },
+    {
+      "title": "Lorem ipsum dolor sit.",
+      "year": "2024",
+      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
+      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
+    }
+]  

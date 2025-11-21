@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume</title>
+    <link rel="stylesheet" href="https://brianjjing.github.io/dsc106-lab06/style.css">
+</head>
+<body>
+    <header>
+        <h1>Brian Jing</h1>
+        <p>Data science sophomore at UCSD with over 2 years of experience developing end-to-end AI projects for optimizing physical performance.</p>
+        <p>Passionate about leveraging AI to enhance healthcare and physical fitness.</p>
+        <p>Strong familiarity with tools for building AI applications, with emphasis on PyTorch, Tensorflow, and AWS.</p>
+        <p>(949) 596-6942 | <a href="mailto:brianjing1@gmail.com">brianjing1@gmail.com</a> | <a href="https://linkedin.com/in/brian-jing">linkedin.com/in/brian-jing</a></p>
+    </header>
+
+  <section>
+    <h2>Projects</h2>
+
+    <article>
+      <h3>POWERCOACH - Powerlifting Form Correction App</h3>
+      <p><time datetime="2024-08">August 2024</time> - Present</p>
+      <ul>
+        <li>Developed a Flask-SocketIO backend for an AI mobile app that provides real-time powerlifting critique for 15 barbell exercises, with the service deployed on AWS Elastic Container Service.</li>
+        <li>Built an intuitive Swift frontend that audiovisually presents backend form correction feedback, with user-created workout plans and profile data managed using PostgreSQL on AWS.</li>
+        <li>Trained a custom barbell detection model on over 15,000 scraped images using Google's MediaPipe object detection API, achieving an average true bounding box overlap of 0.5 on individual frames.</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3>BFRB Gesture Classifier</h3>
+      <p><time datetime="2024-06">June 2024</time> - <time datetime="2024-07">July 2024</time></p>
+      <ul>
+        <li>Engineered a PyTorch neural network + XGBoost pipeline to classify body-focused repetitive behaviors (BFRB) based on wrist-worn sensor data, achieving an 84% F1 testing score through 5-fold cross validation.</li>
+        <li>Performed multivariate imputation on over 30,000 missing data entries within a 500,000-entry dataset using scikit-learn, optimizing imputation hyperparameters with Bayesian optimization.</li>
+        <li>Boosted model training efficiency while maintaining classification accuracy by reducing 300 of the dataset's redundant raw sensor variables to 25 extracted statistical features.</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3>X-Ray Tuberculosis Detector</h3>
+      <p><time datetime="2025-06">June 2025</time> - <time datetime="2025-09">September 2025</time></p>
+      <ul>
+        <li>Trained a Keras convolutional neural network to diagnose tuberculosis in over 4,200 chest X-rays, achieving a 98% testing accuracy with Adam optimization and ReduceLROnPlateau.</li>
+        <li>Published as a notebook to Kaggle, calling on over 2,000 viewers to optimize the model and explore computer vision innovations in healthcare.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+    <article>
+      <h3>Independent Math Tutor</h3>
+      <p>Self-Employed, Irvine, CA/La Jolla, CA</p>
+      <p><time datetime="2024-02">February 2024</time> - Present</p>
+      <ul>
+        <li>Guided 15 K-12th grade students to achieve A's in math classes they previously struggled in, through personalized algebra, geometry, and calculus tutoring, generating over $10,000 in revenue.</li>
+        <li>Tailored lesson plans to students' individual learning styles, increasing average test scores by ~15% from before the tutoring sessions and improving student confidence.</li>
+        <li>Generated over $10,000 in revenue through local parent networking and targeted advertising on Nextdoor.</li>
+      </ul>
+    </article>
+
+    <article>
+      <h3>Data Science Lead</h3>
+      <p>Ignited Minds Nonprofit, Irvine, CA</p>
+      <p><time datetime="2023-07">July 2023</time> - <time datetime="2024-04">April 2024</time></p>
+      <ul>
+        <li>Designed and taught the first data science programs for 11 Malawian high schools remotely.</li>
+        <li>Enhanced teaching methods based on class participation levels, fostering engaging learning environments that developed students' interest and expertise in data science.</li>
+        <li>Published monthly online blogs on real-world data science topics to over 1,000 global readers.</li>
+      </ul>
+    </article>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <p>
+        <strong>Deep Learning</strong> (CNNs, PyTorch, Tensorflow/Keras)<br>
+        <strong>Modeling</strong> (Scikit-learn, XGBoost, Random Forest)<br>
+        <strong>Data Visualization</strong> (Seaborn, R)<br>
+        <strong>App Development Lifecycle</strong> (AWS, Flask, WebSockets, Swift, SQL)
+    </p>
+  </section>
+<script type="module" src="https://brianjjing.github.io/dsc106-lab06/global.js?v=2"></script>
+</body>
+</html>

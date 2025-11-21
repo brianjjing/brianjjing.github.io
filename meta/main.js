@@ -239,9 +239,12 @@ function updateFileDisplay(commits) {
     if (container.empty()) return;
 
     const lines = commits.flatMap((d) => d.lines ?? []);
-    const files = d3
+    let files = d3
         .groups(lines, (d) => d.file)
-        .map(([name, lines]) => ({ name, lines }));
+        .map(([name, lines]) => {
+          return { name, lines };
+        })
+        .sort((a, b) => b.lines.length - a.lines.length);
 
     const filesContainer = container
         .selectAll('div')

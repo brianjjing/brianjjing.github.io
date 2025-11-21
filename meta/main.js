@@ -234,11 +234,38 @@ function updateScatterPlot(data, commits) {
       });
 }
 
+function updateFileDisplay(commits) {
+    const container = d3.select('#files');
+    if (container.empty()) return;
+
+    const lines = commits.flatMap((d) => d.lines ?? []);
+    const files = d3
+        .groups(lines, (d) => d.file)
+        .map(([name, lines]) => ({ name, lines }));
+
+    const filesContainer = container
+        .selectAll('div')
+        .data(files, (d) => d.name)
+        .join(
+            (enter) =>
+                enter.append('div').call((div) => {
+                    div.append('dt').append('code');
+                    div.append('dd');
+                }),
+            (update) => update,
+            (exit) => exit.remove(),
+        );
+
+    filesContainer.select('dt > code').text((d) => d.name);
+    filesContainer.select('dd').text((d) => `${d.lines.length} lines`);
+}
+
 let data = await loadData();
 let commits = processCommits(data); //info abt each commit
 let filteredCommits = commits;
 console.log(commits)
 renderScatterPlot(data, commits);
+updateFileDisplay(filteredCommits);
 
 // Slider-driven time filtering UI
 let commitProgress = 100;
@@ -264,6 +291,7 @@ function onTimeSliderChange() {
 
   filteredCommits = commits.filter((d) => d.datetime <= commitMaxTime);
   updateScatterPlot(data, filteredCommits);
+  updateFileDisplay(filteredCommits);
 
   if (commitTimeEl && commitMaxTime) {
     commitTimeEl.textContent = commitMaxTime.toLocaleString('en', {

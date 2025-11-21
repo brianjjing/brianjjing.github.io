@@ -175,10 +175,46 @@ let commits = processCommits(data); //info abt each commit
 console.log(commits)
 renderScatterPlot(data, commits);
 
+// Slider-driven time filtering UI
+let commitProgress = 100;
+
+const timeScale = d3
+  .scaleTime()
+  .domain([
+    d3.min(commits, (d) => d.datetime),
+    d3.max(commits, (d) => d.datetime),
+  ])
+  .range([0, 100]);
+
+let commitMaxTime = timeScale.invert(commitProgress);
+
+const timeSlider = document.getElementById('commit-progress');
+const commitTimeEl = document.getElementById('commit-time');
+
+function onTimeSliderChange() {
+  if (!timeSlider) return;
+
+  commitProgress = Number(timeSlider.value);
+  commitMaxTime = timeScale.invert(commitProgress);
+
+  if (commitTimeEl && commitMaxTime) {
+    commitTimeEl.textContent = commitMaxTime.toLocaleString('en', {
+      dateStyle: 'long',
+      timeStyle: 'short',
+    });
+  }
+}
+
+if (timeSlider) {
+  timeSlider.addEventListener('input', onTimeSliderChange);
+  // Initialize display on first load
+  onTimeSliderChange();
+}
+
 function renderTooltipContent(commit) {
     const link = document.getElementById('commit-link');
     const date = document.getElementById('commit-date');
-    const time = document.getElementById('commit-time');
+    const time = document.getElementById('commit-tooltip-time');
     const author = document.getElementById('commit-author');
     const lines_edited = document.getElementById('commit-lines-edited');
 

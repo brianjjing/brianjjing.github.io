@@ -1,5 +1,6 @@
 import * as d3 from 'https://cdn.jsdelivr.net/npm/d3@7.9.0/+esm';
 import '../global.js';
+import scrollama from 'https://cdn.jsdelivr.net/npm/scrollama@3.2.0/+esm';
 
 async function loadData() {
     const data = await d3.csv('loc.csv', (row) => ({
@@ -15,7 +16,7 @@ async function loadData() {
 }
   
 function processCommits(data) {
-    return d3
+    let commits = d3
       .groups(data, (d) => d.commit)
       .map(([commit, lines]) => {
         let first = lines[0];
@@ -41,6 +42,8 @@ function processCommits(data) {
   
         return ret;
     });
+
+    return d3.sort(commits, (a) => a.datetime);
 }
   
 function renderCommitInfo(data, commits) {
@@ -453,3 +456,30 @@ d3.select('#scatter-story')
 		Then I looked over all I had made, and I saw that it was very good.
 	`,
   );
+
+
+  function onStepEnter(response) {
+    // 1. Get the datetime from the step that just entered the viewport center
+    const commitDatetime = response.element.__data__.datetime;
+    
+    // 2. Filter the global commits list up to the entered datetime
+    // Use the original (unsorted) global commits array for filtering
+    const updatedCommits = commits.filter((d) => d.datetime <= commitDatetime);
+    
+    // 3. Update the scatter plot and file display with the truncated list
+    // The scatter plot will redraw only the commits up to that point in time.
+    updateScatterPlot(data, updatedCommits);
+    updateFileDisplay(updatedCommits);
+  
+    // Optional: Update the selection count message (though the slider usually handles this)
+    d3.select('#selection-count').text(`${updatedCommits.length} commits selected`);
+  }
+
+const scroller = scrollama();
+scroller
+  .setup({
+    container: '#scrolly-1',
+    step: '#scrolly-1 .step',
+    offset: 0.5
+  })
+  .onStepEnter(onStepEnter);

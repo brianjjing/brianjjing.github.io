@@ -43,6 +43,8 @@ function processCommits(data) {
         return ret;
     });
 
+    // FIX 1: Sort commits by datetime before returning.
+    // This is crucial for scrollama to process steps in chronological order.
     return d3.sort(commits, (a) => a.datetime);
 }
   
@@ -439,47 +441,49 @@ d3.select('#scatter-story')
   .attr('class', 'step')
   .html(
     (d, i) => `
-		On ${d.datetime.toLocaleString('en', {
+    On ${d.datetime.toLocaleString('en', {
       dateStyle: 'full',
       timeStyle: 'short',
     })},
-		I made <a href="${d.url}" target="_blank">${
+    I made <a href="${d.url}" target="_blank">${
       i > 0 ? 'another glorious commit' : 'my first commit, and it was glorious'
     }</a>.
-		I edited ${d.totalLines} lines across ${
+    I edited ${d.totalLines} lines across ${
       d3.rollups(
         d.lines,
         (D) => D.length,
         (d) => d.file,
       ).length
     } files.
-		Then I looked over all I had made, and I saw that it was very good.
-	`,
+    Then I looked over all I had made, and I saw that it was very good.
+  `,
   );
 
 
-  function onStepEnter(response) {
-    // 1. Get the datetime from the step that just entered the viewport center
-    const commitDatetime = response.element.__data__.datetime;
-    
-    // 2. Filter the global commits list up to the entered datetime
-    // Use the original (unsorted) global commits array for filtering
-    const updatedCommits = commits.filter((d) => d.datetime <= commitDatetime);
-    
-    // 3. Update the scatter plot and file display with the truncated list
-    // The scatter plot will redraw only the commits up to that point in time.
-    updateScatterPlot(data, updatedCommits);
-    updateFileDisplay(updatedCommits);
+// FIX 2: Implement the logic inside onStepEnter
+function onStepEnter(response) {
+  // 1. Get the datetime from the step that just entered the viewport center
+  const commitDatetime = response.element.__data__.datetime;
   
-    // Optional: Update the selection count message (though the slider usually handles this)
-    d3.select('#selection-count').text(`${updatedCommits.length} commits selected`);
-  }
+  // 2. Filter the global commits list up to the entered datetime
+  // Use the original (unsorted) global commits array for filtering
+  const updatedCommits = commits.filter((d) => d.datetime <= commitDatetime);
+  
+  // 3. Update the scatter plot and file display with the truncated list
+  // The scatter plot will redraw only the commits up to that point in time.
+  updateScatterPlot(data, updatedCommits);
+  updateFileDisplay(updatedCommits);
+
+  // Optional: Update the selection count message (though the slider usually handles this)
+  d3.select('#selection-count').text(`${updatedCommits.length} commits selected`);
+}
 
 const scroller = scrollama();
 scroller
   .setup({
     container: '#scrolly-1',
     step: '#scrolly-1 .step',
-    offset: 0.5
+    // Set offset so the update triggers when the step hits the middle of the screen
+    can 
   })
   .onStepEnter(onStepEnter);

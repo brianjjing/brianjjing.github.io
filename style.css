@@ -350,7 +350,7 @@ circle.selected {
   width: 0.5em;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
-  background: steelblue;
+  background: var(--color);
 }
 
 /* Stats class: */

@@ -43,8 +43,6 @@ function processCommits(data) {
         return ret;
     });
 
-    // FIX 1: Sort commits by datetime before returning.
-    // This is crucial for scrollama to process steps in chronological order.
     return d3.sort(commits, (a) => a.datetime);
 }
   
@@ -441,41 +439,38 @@ d3.select('#scatter-story')
   .attr('class', 'step')
   .html(
     (d, i) => `
-    On ${d.datetime.toLocaleString('en', {
+    <p>On ${d.datetime.toLocaleString('en', {
       dateStyle: 'full',
       timeStyle: 'short',
-    })},
-    I made <a href="${d.url}" target="_blank">${
+    })},</p>
+    <p>I made <a href="${d.url}" target="_blank">${
       i > 0 ? 'another glorious commit' : 'my first commit, and it was glorious'
-    }</a>.
-    I edited ${d.totalLines} lines across ${
+    }</a>.</p>
+    <p>I edited <strong>${d.totalLines}</strong> lines across <strong>${
       d3.rollups(
         d.lines,
         (D) => D.length,
         (d) => d.file,
       ).length
-    } files.
-    Then I looked over all I had made, and I saw that it was very good.
+    }</strong> files.</p>
   `,
   );
 
-
-// FIX 2: Implement the logic inside onStepEnter
 function onStepEnter(response) {
-  // 1. Get the datetime from the step that just entered the viewport center
+  // 1. Get the datetime
   const commitDatetime = response.element.__data__.datetime;
   
-  // 2. Filter the global commits list up to the entered datetime
-  // Use the original (unsorted) global commits array for filtering
+  // 2. Filter commits
   const updatedCommits = commits.filter((d) => d.datetime <= commitDatetime);
   
-  // 3. Update the scatter plot and file display with the truncated list
-  // The scatter plot will redraw only the commits up to that point in time.
+  // 3. Update Visualization
   updateScatterPlot(data, updatedCommits);
   updateFileDisplay(updatedCommits);
-
-  // Optional: Update the selection count message (though the slider usually handles this)
   d3.select('#selection-count').text(`${updatedCommits.length} commits selected`);
+
+  // 4. Highlight the active step text
+  d3.selectAll('.step').classed('is-active', false); // Reset all
+  d3.select(response.element).classed('is-active', true); // Highlight current
 }
 
 const scroller = scrollama();
@@ -483,7 +478,7 @@ scroller
   .setup({
     container: '#scrolly-1',
     step: '#scrolly-1 .step',
-    // Set offset so the update triggers when the step hits the middle of the screen
-    can 
+    offset: 0.5, // Trigger when step hits middle of screen
+    debug: true, // TEMPORARY: Shows trigger lines to help debug scrolling
   })
   .onStepEnter(onStepEnter);

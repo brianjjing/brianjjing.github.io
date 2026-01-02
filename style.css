@@ -418,3 +418,51 @@ circle.selected {
   bottom: auto;
   height: 50vh;
 }
+
+
+/* New Index Page Styling: */
+.profile-pic {
+  width: 300px;              /* adjust size as needed */
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;        /* makes it a circle */
+  border: 4px solid #000000; /* black circular border */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12); /* optional soft shadow */
+}
+.profile-pic-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 25px 0 35px;
+}
+.container {
+  max-width: 800px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  padding: 40px;
+}
+.container h2:first-child {
+  margin-top: 0;
+}
+.link-logos-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.link-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 75%;
+}
+.link-logos a img {
+  width: 75px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  transition: transform 0.2s ease;
+}
+.link-logos a:hover img {
+  transform: scale(1.05);
+}

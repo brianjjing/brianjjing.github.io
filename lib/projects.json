@@ -9,7 +9,7 @@
       "title": "NBA Clutch Player Analysis 🏀",
       "year": "2025",
       "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/1641824.png",
-      "description": "In the 2025 Fall quarter at UCSD, I was the project manager for a group in the Eclipse (Sports) Analytics club. My project group consisted of 3 fellow data science students at UCSD, who I led to create a Principal Component Analysis + Ridge Regression pipeline to determine what makes a clutch player in the modern NBA (2020-2025). We first used PCA to create a clutch score using unsupervised learning, and then used ridge regression to track the ranked importance of each meta-feature in this clutch score calculation, of which simply the weighted average of each individual player statistic ended up being the most important factor in determining clutchness. The most clutch player, by the metrics defined in this project, ended up being Matas Buzelis."
+      "description": "In the 2025 Fall quarter at UCSD, I was the project manager for a group in the Eclipse (Sports) Analytics club. My project group consisted of 3 fellow data science students at UCSD, who I led to create a Principal Component Analysis + Ridge Regression pipeline to determine what makes a clutch player in the modern NBA (2020-2025). We first used PCA to create a clutch score using unsupervised learning, and then used ridge regression to track the ranked importance of each meta-feature in this clutch score calculation, of which simply the weighted average of each individual player statistic ended up being the most important factor in determining clutchness. The most clutch player, by the metrics defined in this project, ended up being Matas Buzelis (pictured above)."
     },
     {
       "title": "CMI Behavior Detection with Sensor Data 👋",
@@ -32,7 +32,7 @@
     {
       "title": "Alzheimer’s Diagnosis Model 🧠",
       "year": "2023",
-      "image": "https://cdn-icons-png.flaticon.com/512/4149/4149670.png",
+      "image": "https://www.shutterstock.com/image-vector/human-brain-on-white-background-600nw-2223681337.jpg",
       "description": "This was my first full end-to-end data science pipeline, built during UC Irvine’s 2023 ICS Summer Academy. To clean a dataset of over 2,700 healthcare patient questionaire, I collaboratively balanced 'Alzheimers' and 'No Alzheimers' patient classes with SMOTE. Then, we developed a multinomial LASSO regression model that outputted a list of the most important features in this dataset for determining an Alzheimer's diagnosis, which we fed into a random forest model to finish creating a pipeline that could detect Alzheimer’s from medical records using R. We achieved 90% testing accuracy in the end, and combined with EDA using the ggplot2 library, created a presentation to showcase our findings to UC Irvine staff and parents."
     }
 ]  

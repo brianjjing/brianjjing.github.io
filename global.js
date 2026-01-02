@@ -123,7 +123,12 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
                 : `<div class="placeholder">No image available</div>`
             }
             <p>${project.description ?? "No description provided."}</p>
-            <p></p>
+            ${project.link
+                ? `<a class="project-link" href="${project.link}" target="_blank" rel="noopener">
+                     View Project →
+                   </a>`
+                : `<span class="project-link disabled">Project is currently private</span>`
+              }
             <p class="projects-year-text">${project.year.italics() ?? "No year provided.".italics()}</p>
         `;
 

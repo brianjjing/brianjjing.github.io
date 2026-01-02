@@ -1,15 +1,21 @@
 [
     {
       "title": "POWERCOACH 🏋️",
-      "year": "2025",
+      "year": "2024-2025",
       "image": "https://media.istockphoto.com/id/1165573327/vector/strong-man-with-heavy-barbell-struggle-doing-exercise.jpg?s=612x612&w=0&k=20&c=UbLr-MYZDNOd-BX2ClP21jFSDtmIFfDLefsT64VCvxo=",
       "description": "My current and most long-term project. POWERCOACH is a real-time powerlifting form feedback app built using Flask-SocketIO and Mediapipe for the backend, SwiftUI for the frontend, and websockets to connect them. Just set up your camera, lift, and see and hear form critiques from your POWERCOACH! I plan to launch the app on the App Store, with support for 15 weightlifting exercises including the 3 big powerlifting movements (squat, bench, deadlift)."
+    },
+    {
+      "title": "NBA Clutch Player Analysis 🏀",
+      "year": "2025",
+      "image": "https://cdn.nba.com/headshots/nba/latest/1040x760/1641824.png",
+      "description": "In the 2025 Fall quarter at UCSD, I was the project manager for a group in the Eclipse (Sports) Analytics club. My project group consisted of 3 fellow data science students at UCSD, who I led to create a Principal Component Analysis + Ridge Regression pipeline to determine what makes a clutch player in the modern NBA (2020-2025). We first used PCA to create a clutch score using unsupervised learning, and then used ridge regression to track the ranked importance of each meta-feature in this clutch score calculation, of which simply the weighted average of each individual player statistic ended up being the most important factor in determining clutchness. The most clutch player, by the metrics defined in this project, ended up being Matas Buzelis."
     },
     {
       "title": "CMI Behavior Detection with Sensor Data 👋",
       "year": "2025",
       "image": "https://elements-resized.envatousercontent.com/elements-cover-images/c82ed5fd-c4f5-49e2-878c-b1a3ca6badbf?w=1200&h=630&cf_fit=crop&q=85&format=jpeg&s=b09b1f87a61c4525197a530d759d26172ef6954d05c3a8ec77a83499f240ec44",
-      "description": "I'm currently participating in the Child Mind Institute (CMI) Behavior Detection with Sensor Data Kaggle competition. The goal is to classify body-focused repetitive behaviors (BFRBs) from non-BFRB everyday gestures, in a dataset of over 570,000 gestures. This project involves time-series analysis and deep learning for gesture recognition."
+      "description": "Throughout 2024, I focused on In summer 2025 I participated in the Child Mind Institute (CMI) 'Behavior Detection with Sensor Data' Kaggle competition. The goal was to classify body-focused repetitive behaviors (BFRBs) from non-BFRB everyday gestures, in a dataset of over 570,000 gestures. This was my first exposure to time-series analysis with sequential data, and has given me the skills necessary to implement my current sequential sliding window lift analysis framework for POWERCOACH. I engineered an XGBoost + PyTorch neural network pipeline with a high school friend for this project, improving our F1 testing score by ~40% through cross validation optimization of neural network hyperparameters."
     },
     {
       "title": "AI Tuberculosis Detector 🦠",

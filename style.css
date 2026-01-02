@@ -434,16 +434,6 @@ circle.selected {
   justify-content: center;
   margin: 25px 0 35px;
 }
-.container {
-  max-width: 800px;
-  background-color: #ffffff;
-  border-radius: 20px;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
-  padding: 40px;
-}
-.container h2:first-child {
-  margin-top: 0;
-}
 .link-logos-wrapper {
   display: flex;
   justify-content: center;

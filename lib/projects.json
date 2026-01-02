@@ -28,47 +28,5 @@
       "year": "2023",
       "image": "https://cdn-icons-png.flaticon.com/512/4149/4149670.png",
       "description": "My first full end-to-end data science pipeline, built during UC Irvine’s 2023 ICS Summer Academy. Our team developed a multinomial LASSO regression and random forest model to detect Alzheimer’s from medical records using R. Achieved 90% accuracy on 2,700 patient records after SMOTE balancing and EDA with ggplot2."
-    },
-    {
-      "title": "Lorem ipsum dolor sit.",
-      "year": "2024",
-      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
-    },
-    {
-      "title": "Lorem ipsum dolor sit.",
-      "year": "2024",
-      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
-    },
-    {
-      "title": "Lorem ipsum dolor sit.",
-      "year": "2024",
-      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
-    },
-    {
-      "title": "Lorem ipsum dolor sit.",
-      "year": "2024",
-      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
-    },
-    {
-      "title": "Lorem ipsum dolor sit.",
-      "year": "2024",
-      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
-    },
-    {
-      "title": "Lorem ipsum dolor sit.",
-      "year": "2024",
-      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
-    },
-    {
-      "title": "Lorem ipsum dolor sit.",
-      "year": "2024",
-      "image": "https://dsc106.com/labs/lab02/images/empty.svg",
-      "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam dolor quos, quod assumenda explicabo odio, nobis ipsa laudantium quas eum veritatis ullam sint porro minima modi molestias doloribus cumque odit."
     }
 ]  
